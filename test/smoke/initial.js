@@ -1,5 +1,6 @@
 const sel = require ('../../data/selectors.json')
-import data from '../../data/expected.json'
+const exp = require ('../../data/expected.json')
+import {field, gender} from '../../data/helpers'
 
 describe('My Little Hero', function () { //define suite title by passing a string
 
@@ -11,7 +12,6 @@ describe('My Little Hero', function () { //define suite title by passing a strin
             browser.pause(2000); //just pause to visually see that something is happening on the page
             expect(title).toEqual('MLH trial'); //compare {title} (actual) and "MLH trial" (expected)
         });
-
     });
 
     describe('Elements are exist', function () {
@@ -25,7 +25,7 @@ describe('My Little Hero', function () { //define suite title by passing a strin
         });
 
         it('TC-004 Label for name', function () {
-            expect($$(sel.label)[0].isDisplayed()).toEqual(true);
+            expect($$(sel.label)[field.name].isDisplayed()).toEqual(true);
         });
 
         it('TC-005 Label for placeholder name', function () {
@@ -33,23 +33,23 @@ describe('My Little Hero', function () { //define suite title by passing a strin
         });
 
         it('TC-006 Label for gender', function () {
-            expect($$(sel.label)[1].isDisplayed()).toEqual(true);
+            expect($$(sel.label)[field.gender].isDisplayed()).toEqual(true);
         });
 
         it('TC-007 Label for radio button "he"', function () {
-            expect($$(sel.gender)[0].isDisplayed()).toEqual(true);
+            expect($$(sel.gender)[gender.HE].isDisplayed()).toEqual(true);
         });
 
         it('TC-008 Label for radio button "she"', function () {
-            expect($$(sel.gender)[1].isDisplayed()).toEqual(true);
+            expect($$(sel.gender)[gender.SHE].isDisplayed()).toEqual(true);
         });
 
         it('TC-009 Label for radio button "it"', function () {
-            expect($$(sel.gender)[2].isDisplayed()).toEqual(true);
+            expect($$(sel.gender)[gender.IT].isDisplayed()).toEqual(true);
         });
 
         it('TC-010 Label for age', function () {
-            expect($$(sel.label)[2].isDisplayed()).toEqual(true);
+            expect($$(sel.label)[field.age].isDisplayed()).toEqual(true);
         });
 
         it('TC-011 Label for placeholder age', function () {
@@ -57,7 +57,7 @@ describe('My Little Hero', function () { //define suite title by passing a strin
         });
 
         it('TC-012 Label for story', function () {
-            expect($$(sel.label)[3].isDisplayed()).toEqual(true);
+            expect($$(sel.label)[field.story].isDisplayed()).toEqual(true);
         });
 
         it('TC-013 Label for placeholder story', function () {
@@ -65,7 +65,7 @@ describe('My Little Hero', function () { //define suite title by passing a strin
         });
 
         it('TC-014 Label for image', function () {
-            expect($$(sel.label)[4].isDisplayed()).toEqual(true);
+            expect($$(sel.label)[field.image].isDisplayed()).toEqual(true);
         });
 
         it('TC-015 Label for drag and drop field', function () {
@@ -80,63 +80,70 @@ describe('My Little Hero', function () { //define suite title by passing a strin
     describe('Labels are correct', function () {
 
         it('TC-017 Text for header = My Little Hero', function () {
-            expect($(sel.header).getText()).toEqual('My Little Hero');
+            expect($(sel.header).getText()).toEqual(exp.labelHeader);
         });
 
         it('TC-018 Text for subheader = Let\'s create your own HERO! It\'s super easy with our application!', function () {
-            expect($(sel.subHeader).getText()).toEqual('Let\'s create your own HERO! It\'s super easy with our application!');
+            expect($(sel.subHeader).getText()).toEqual(exp.labelSubheader);
         });
 
         it('TC-019 Text for name = 1. What is your HERO\'s name?', function () {
-            expect($$(sel.label)[0].getText()).toEqual('1. What is your HERO\'s name?');
+            expect($$(sel.label)[field.name].getText()).toEqual(exp.labelName);
         });
 
         it('TC-020 Text for placeholder name = Hero\'s name', function () {
-            expect($(sel.name).getAttribute('placeholder')).toEqual('Hero\'s name');
+            expect($(sel.name).getAttribute('placeholder')).toEqual(exp.placeholderName);
         });
 
         it('TC-021 Text for gender = 2. Please choose your gender', function () {
-            expect($$(sel.label)[1].getText()).toEqual('2. Please choose your gender');
+            expect($$(sel.label)[field.gender].getText()).toEqual(exp.labelGender);
         });
 
         it('TC-022 Text for gender "he"', function () {
-            expect($$(sel.radioBtn)[0].getText()).toEqual('he');
+            expect($$(sel.radioBtn)[gender.HE].getText()).toEqual(exp.HE);
         });
 
         it('TC-023 Text for gender "she"', function () {
-            expect($$(sel.radioBtn)[1].getText()).toEqual('she');
+            expect($$(sel.radioBtn)[gender.SHE].getText()).toEqual(exp.SHE);
         });
 
         it('TC-024 Text for gender "it"', function () {
-            expect($$(sel.radioBtn)[2].getText()).toEqual('it');
+            expect($$(sel.radioBtn)[gender.IT].getText()).toEqual(exp.IT);
         });
 
         it('TC-025 Text for age = 3. How old is your hero?', function () {
-            expect($$(sel.label)[2].getText()).toEqual('3. How old is your hero?');
+            expect($$(sel.label)[field.age].getText()).toEqual(exp.labelAge);
         });
 
         it('TC-026 Text for placeholder age = Hero\'s age', function () {
-            expect($(sel.age).getAttribute('placeholder')).toEqual('Hero\'s age');
+            expect($(sel.age).getAttribute('placeholder')).toEqual(exp.placeholderAge);
         });
 
         it('TC-027 Text for story = 4. What type of story would you like to read?', function () {
-            expect($$(sel.label)[3].getText()).toEqual('4. What type of story would you like to read?');
+            expect($$(sel.label)[field.story].getText()).toEqual(exp.labelStory);
         });
 
         it('TC-028 Text for placeholder story = Type of the story', function () {
-            expect($(sel.storyPlaceholderText).getText()).toEqual('Type of the story');
+            expect($(sel.storyPlaceholderText).getText()).toEqual(exp.placeholderStory);
         });
 
         it('TC-029 Text for image = 5. Upload an image (optional)', function () {
-            expect($$(sel.label)[4].getText()).toEqual('5. Upload an image (optional)');
+            expect($$(sel.label)[field.image].getText()).toEqual(exp.labelImage);
         });
 
         it('TC-030 Text for placeholder drag and drop  = Click or drag and drop', function () {
-            expect($(sel.dragAndDropField).getText()).toEqual('Click or drag and drop');
+            expect($(sel.dragAndDropField).getText()).toEqual(exp.dragAndDropField);
         });
 
         it('TC-031 Text for create button  = Create', function () {
-            expect($(sel.createBtn).getText()).toEqual('Create');
+            expect($(sel.createBtn).getText()).toEqual(exp.createBtnText);
+        });
+    });
+
+    describe('TC-032 Verify story type names in drop down menu', function () {
+
+        it('TC-033 Text for create button  = Create', function () {
+            expect($(sel.createBtn).getText()).toEqual(exp.createBtnText);
         });
 
     });
