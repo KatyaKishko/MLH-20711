@@ -1,6 +1,6 @@
 const sel = require ('../../data/selectors.json')
 const exp = require ('../../data/expected.json')
-import {field, gender} from '../../data/helpers'
+import {field, gender, story} from '../../data/helpers'
 
 describe('My Little Hero', function () { //define suite title by passing a string
 
@@ -140,11 +140,44 @@ describe('My Little Hero', function () { //define suite title by passing a strin
         });
     });
 
-    describe('TC-032 Verify story type names in drop down menu', function () {
-
-        it('TC-033 Text for create button  = Create', function () {
-            expect($(sel.createBtn).getText()).toEqual(exp.createBtnText);
+    describe('Verify story type names in drop down menu', function () {
+        before(() => {
+            $(sel.dropDownMenu).click();
         });
 
+        it('TC-032 Check placeholder name = Overcoming the Monster', function () {
+            expect($$(sel.typeOfStory)[story.overcomingTheMonster].getText()).toEqual(exp.overcomingTheMonster);
+        });
+
+        it('TC-033 Check placeholder name = Rebirth', function () {
+            expect($$(sel.typeOfStory)[story.rebirth].getText()).toEqual(exp.rebirth);
+        });
+
+        it('TC-034 Check placeholder name = Quest', function () {
+            expect($$(sel.typeOfStory)[story.quest].getText()).toEqual(exp.quest);
+        });
+
+        it('TC-035 Check placeholder name = Journey and Return', function () {
+            expect($$(sel.typeOfStory)[story.journeyAndReturn].getText()).toEqual(exp.journeyAndReturn);
+        });
+
+        it('TC-036 Check placeholder name = Rags and Riches', function () {
+            expect($$(sel.typeOfStory)[story.ragsAndRiches].getText()).toEqual(exp.ragsAndRiches);
+        });
+
+        it('TC-037 Check placeholder name = Tragedy', function () {
+            expect($$(sel.typeOfStory)[story.tragedy].getText()).toEqual(exp.tragedy);
+        });
+
+        it('TC-038 Check placeholder name = Comedy', function () {
+            expect($$(sel.typeOfStory)[story.comedy].getText()).toEqual(exp.comedy);
+        });
+    });
+
+    describe('Verify image placeholder is clickable', function () {
+
+        it('TC-039 Check image placeholder is clickable', function () {
+            expect($(sel.dragAndDropField).isClickable());
+        });
     });
 });

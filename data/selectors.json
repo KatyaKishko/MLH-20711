@@ -8,6 +8,8 @@
   "age": "#age",
   "story": ".ant-select-selection-search",
   "storyPlaceholderText": ".ant-select-selection-placeholder",
+  "dropDownMenu": ".ant-select-selector",
+  "typeOfStory": ".ant-select-item-option-content",
   "dragAndDropField": ".ant-upload",
   "createBtn": ".ant-btn"
 }
