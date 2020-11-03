@@ -21,40 +21,57 @@ describe('Label 1: Name', function () {
     });
 
     it('TC-3.4 Verify that the Name field accepts max length (70 symbols)', function () {
-        expect($(sel.name).setValue(userInput.name1));
+        ($(sel.name).setValue(userInput.name1));
+        expect($(sel.name).getValue()).toEqual(exp.nameInput1);
     });
 
     it('TC-3.5 Verify that the Name field accepts min length (1 symbol)', function () {
-        expect($(sel.name).setValue(userInput.name2));
+        browser.refresh();
+        ($(sel.name).setValue(userInput.name2));
+        expect($(sel.name).getValue()).toEqual(exp.nameInput2);
     });
 
     it('TC-3.6 Verify that the Name field does not accept > max length', function () {
-        $(sel.name).setValue(userInput.name3);
+        browser.refresh();
+        ($(sel.name).setValue(userInput.name3));
+        ($(sel.errorMsg).waitForDisplayed());
         expect($(sel.errorMsg).getText()).toEqual(exp.errorMessage);
     });
 
     it('TC-3.7 Verify that input field does not accept only spaces', function () {
-        expect($(sel.name).setValue(userInput.name4));
+        browser.refresh();
+        ($(sel.name).setValue(userInput.name4));
+        expect($(sel.name).getValue()).toEqual(exp.nameInput4);
     });
 
     it('TC-3.8 Verify that the input field accepts uppercase letters (A-Z)', function () {
-        expect($(sel.name).setValue(userInput.name5));
+        browser.refresh();
+        ($(sel.name).setValue(userInput.name5));
+        expect($(sel.name).getValue()).toEqual(exp.nameInput5);
     });
 
     it('TC-3.9 Verify that the input field accepts lowercase letters (a-z)', function () {
-        expect($(sel.name).setValue(userInput.name6));
+        browser.refresh();
+        ($(sel.name).setValue(userInput.name6));
+        expect($(sel.name).getValue()).toEqual(exp.nameInput6);
     });
 
     it('TC-3.10 Verify that the input field accepts digits (0-9)', function () {
-        expect($(sel.name).setValue(userInput.name7));
+        browser.refresh();
+        ($(sel.name).setValue(userInput.name7));
+        expect($(sel.name).getValue()).toEqual(exp.nameInput7);
     });
 
     it('TC-3.11 Validate that the input field: accepts special characters (!, @, #, $, %, ^, &, *, (, ), -, +, _, =, ~)', function () {
-        expect($(sel.name).setValue(userInput.name8));
+        browser.refresh();
+        ($(sel.name).setValue(userInput.name8));
+        expect($(sel.name).getValue()).toEqual(exp.nameInput8);
     });
 
     it('TC-3.12 Validate text of the error message', function () {
-        expect($(sel.name).setValue(userInput.name9));
+        browser.refresh();
+        ($(sel.name).setValue(userInput.name9));
+        expect($(sel.name).getValue()).toEqual(exp.nameInput9);
     });
 
     });
