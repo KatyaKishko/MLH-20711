@@ -19,5 +19,16 @@ const story = {
     tragedy: 5,
     comedy: 6,
 }
+const userInput = {
+    name1: 'fgggggggggggggggggggggggggggggffffffffffffffffffffffffffffffffffffdfsd',
+    name2: 'a',
+    name3: 'fgggggggggggggggggggggggggggggffffffffffffffffffffffffffffffffffffdfsda',
+    name4: '      ',
+    name5: 'H',
+    name6: 'h',
+    name7: 6,
+    name8: '$',
+    name9: 'привет'
+}
 
-module.exports = {field, gender, story}
+module.exports = {field, gender, story, userInput}

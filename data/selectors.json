@@ -11,5 +11,6 @@
   "dropDownMenu": ".ant-select-selector",
   "typeOfStory": ".ant-select-item-option-content",
   "dragAndDropField": ".ant-upload",
-  "createBtn": ".ant-btn"
+  "createBtn": ".ant-btn",
+  "errorMsg": ".ant-form-item-explain"
 }

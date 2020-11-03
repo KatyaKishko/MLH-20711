@@ -20,5 +20,6 @@
   "ragsAndRiches": "Rags and Riches",
   "tragedy": "Tragedy",
   "comedy": "Comedy",
-  "createBtnText": "Create!"
+  "createBtnText": "Create!",
+  "errorMessage": "70 symbols max"
 }
