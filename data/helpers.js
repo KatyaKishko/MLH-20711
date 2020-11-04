@@ -1,3 +1,5 @@
+const sel = require ('../data/selectors.json');
+
 const field = {
     name: 0,
     gender: 1,
@@ -31,4 +33,13 @@ const userInput = {
     name9: 'привет'
 }
 
-module.exports = {field, gender, story, userInput}
+function inputValues4 (name, gender, age, storyType) {
+
+    $(sel.name).setValue(name);
+    $$(sel.genderInput)[gender].click();
+    $(sel.age).setValue(age);
+    $(sel.story).click();
+    $$(sel.typeOfStory)[storyType].click();
+}
+
+module.exports = {field, gender, story, userInput, inputValues4}
