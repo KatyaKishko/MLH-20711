@@ -27,6 +27,9 @@ describe('Checking the main functionality', function () {
             inputDiv.setValue(remoteFilePath)
             $(sel.createBtn).click();
             browser.pause(3000)
+            $(sel.tryAgain).click();
+            browser.pause(3000)
+
         });
     });
 
