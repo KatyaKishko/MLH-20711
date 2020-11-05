@@ -30,7 +30,8 @@ const userInput = {
     name6: 'h',
     name7: 6,
     name8: '$',
-    name9: 'привет'
+    name9: 'привет',
+    randomInput: 'k'
 }
 
 function inputValues4 (name, gender, age, storyType) {
