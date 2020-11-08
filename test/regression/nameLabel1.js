@@ -88,5 +88,4 @@ describe('Label 1: Name', function () {
         $(".ant-input-number-handler-up-inner").click()
         browser.pause(3000)
     });
-
 });
