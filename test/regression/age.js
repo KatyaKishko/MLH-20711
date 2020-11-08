@@ -19,7 +19,7 @@ describe('Age', function () {
         });
 
         it('TC-5.2.1 Age label text', function () {
-            const label = $$(sel.label)[2].getAttribute('title');
+            const label = $$(sel.label)[2].getText();
             expect(label).toEqual(exp.labelAge);
         });
 
@@ -41,7 +41,7 @@ describe('Age', function () {
 
         it('TC-5.5 Input number 1', function () {
 
-            $(sel.age).setValue(val.number1);
+            $(sel.age).setValue(val.twelveSymbol);
             const alert = $(sel.errorMsg).isDisplayed();
             expect(alert).toEqual(false);
         });
@@ -49,7 +49,8 @@ describe('Age', function () {
         it('TC-5.6 Input number 6.8',function () {
 
             $(sel.age).doubleClick();
-            browser.keys('DELETE');
+            browser.keys('\u007F');
+            browser.pause(2000)
             $(sel.age).setValue(val.fractionalNumber);
             const alert = $(sel.errorMsg).isDisplayed();
             expect(alert).toEqual(true);
@@ -57,6 +58,7 @@ describe('Age', function () {
 
         it('TC-5.7 Input number 999999999999', function () {
 
+            $(sel.age).doubleClick();
             browser.refresh();
             $(sel.age).setValue(val.twelveSymbol);
             const alert = $(sel.errorMsg).isDisplayed();
@@ -66,7 +68,7 @@ describe('Age', function () {
         it('TC-5.8 Input number -1',function () {
 
             $(sel.age).doubleClick();
-            browser.keys('DELETE');
+            browser.keys('\u007F');
             $(sel.age).setValue(val.negativeNumber);
             const alert = $(sel.errorMsg).isDisplayed();
             expect(alert).toEqual(true);
@@ -75,15 +77,15 @@ describe('Age', function () {
         it('TC-5.9 Input number 1000000000000',function () {
 
             $(sel.age).doubleClick();
-            browser.keys('DELETE');
+            browser.keys('\u007F');
             $(sel.age).setValue(val.maxNumber);
             const alert = $(sel.errorMsg).isDisplayed();
             expect(alert).toEqual(true);
         });
 
         it('TC-5.10 ', function () {
-
-            browser.refresh();
+            $(sel.age).doubleClick();
+            browser.keys('\u007F');
             $(sel.age).setValue(val.number1);
             $(sel.spinerUp).click();
             const number = $(sel.age).getValue();
@@ -91,8 +93,8 @@ describe('Age', function () {
         });
 
         it('TC-5.11 ', function () {
-
-            browser.refresh();
+            $(sel.age).doubleClick();
+            browser.keys('\u007F');
             $(sel.age).setValue(val.number3);
             $(sel.spinerDown).click();
 
@@ -102,9 +104,8 @@ describe('Age', function () {
         });
 
         it('TC-5.12 ', function () {
-
             $(sel.age).doubleClick();
-            browser.refresh();
+            browser.keys('\u007F');
             $(sel.age).setValue(val.number1);
             $(sel.spinerDown).click();
 
@@ -115,9 +116,8 @@ describe('Age', function () {
         });
 
         it('TC-5.13 ', function () {
-
             $(sel.age).doubleClick();
-            browser.keys('DELETE');
+            browser.keys('\u007F');
             $(sel.age).setValue(val.twelveSymbol);
             $(sel.spinerUp).click();
 
@@ -126,9 +126,8 @@ describe('Age', function () {
         });
 
         it('TC-5.14 ', function () {
-
             $(sel.age).doubleClick();
-            browser.keys('DELETE');
+            browser.keys('\u007F');
             $(sel.age).moveTo();
             $(sel.spinerDown).click();
 
@@ -138,7 +137,6 @@ describe('Age', function () {
 
         it('TC-5.15 ', function () {
 
-            $(sel.age).doubleClick();
             browser.refresh();
             $(sel.age).moveTo();
             $(sel.spinerUp).click();
@@ -148,73 +146,69 @@ describe('Age', function () {
         });
 
         it('TC-5.16 Input spezchar $', function () {
-
             $(sel.age).doubleClick();
-            browser.keys("DELETE");
+            browser.keys('\u007F');
             $(sel.age).setValue(val.spezChar$);
             const alert = $(sel.errorMsg).isDisplayed();
             expect(alert).toEqual(true);
         });
 
         it('TC-5.17', function () {
-
             $(sel.age).doubleClick();
-            browser.keys('DELETE');
+            browser.keys('\u007F');
             const input =          $(sel.age).setValue(val.spezsymbolPlus);
             const alert = $(sel.errorMsg).isDisplayed();
             expect(alert).toEqual(true);
         });
 
         it('TC-5.18', function () {
-
             $(sel.age).doubleClick();
-            browser.keys('DELETE');
+            browser.keys('\u007F');
             const input = $(sel.age).setValue(val.spezCharMinus);
             const alert = $(sel.errorMsg).isDisplayed();
             expect(alert).toEqual(true);
         });
 
         it('TC-5.19', function () {
-
             $(sel.age).doubleClick();
-            browser.keys('DELETE');
+            browser.keys('\u007F');
             const input = $(sel.age).setValue(val.spezCharDat);
             const alert = $(sel.errorMsg).isDisplayed();
             expect(alert).toEqual(true);
         });
 
         it('TC-5.20', function () {
-
             $(sel.age).doubleClick();
-            browser.keys('DELETE');
+            browser.keys('\u007F');
             $(sel.age).setValue(val.upperLetters);
             const alert = $(sel.errorMsg).isDisplayed();
             expect(alert).toEqual(true);
         });
 
         it('TC-5.21', function () {
-
             $(sel.age).doubleClick();
-            browser.keys('DELETE');
+            browser.keys('\u007F');
             $(sel.age).setValue(val.lowerLetters);
             const alert = $(sel.errorMsg).isDisplayed();
             expect(alert).toEqual(true);
         });
 
         it('TC-5.22', function () {
-            browser.pause(2000);
-            browser.refresh();
+
+            $(sel.age).doubleClick();
+            browser.keys('\u007F');
             const input = $(sel.age).setValue(val.numberZero);
-            const alert = $(sel.errorMsg).isDisplayed();
-            expect(alert).toEqual(true);
+            browser.pause(2000);
+            const alert = $(sel.errorMsg).getText();
+            expect(alert).toEqual(exp.errorMsg);
         });
 
         it('TC-5.23', function () {
-            browser.pause(2000);
-            browser.refresh();
+            $(sel.age).doubleClick();
+            browser.keys('\u007F');
             const input = $(sel.age).setValue(val.number1);
             $(sel.age).doubleClick();
-            browser.keys('DELETE');
+            browser.keys('\u007F');
             browser.pause(2000);
             const alert = $(sel.errorMsg).getText();
             expect(alert).toEqual(exp.errorMsgDefault);
@@ -224,10 +218,11 @@ describe('Age', function () {
         it('TC-5.24', function () {
             browser.pause(2000);
             $(sel.age).doubleClick();
-            browser.keys('DELETE');
+            browser.keys('\uE003');
             const input = $(sel.age).setValue(val.numberArb);
+            browser.pause(2000);
             const alert = $(sel.errorMsg).getText();
-            expect(alert).toEqual(exp.errorMsgDefault);
+            expect(alert).toEqual(exp.errorMsg);
         });
     });
 });
