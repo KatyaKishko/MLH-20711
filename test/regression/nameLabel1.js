@@ -82,11 +82,4 @@ describe('Label 1: Name', function () {
         browser.pause(2000)
         expect($(sel.errorMsg).getText()).toEqual(exp.errorMsgDefault);
     });
-
-    it('should *******', function () {
-        //$(".ant-input-number-input-wrap").moveTo();
-        $(".ant-input-number-handler-up-inner").click()
-        browser.pause(3000)
-    });
-
 });
