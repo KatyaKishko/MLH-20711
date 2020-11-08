@@ -15,5 +15,9 @@
   "dragAndDropField": ".ant-upload",
   "createBtn": ".ant-btn",
   "tryAgain": ".btn-primary",
-  "errorMsg": ".ant-form-item-explain"
+  "errorMsg": ".ant-form-item-explain",
+  "placeHolderAge": ".ant-input-number-input",
+  "spiner": ".ant-input-number-input-wrap",
+  "spinerUp": ".ant-input-number-handler-up",
+  "spinerDown": ".ant-input-number-handler-down"
 }
