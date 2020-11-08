@@ -43,4 +43,23 @@ function inputValues4 (name, gender, age, storyType) {
     $$(sel.typeOfStory)[storyType].click();
 }
 
-module.exports = {field, gender, story, userInput, inputValues4}
+function inputValues3 (name, gender, age) {
+    
+    $(sel.name).setValue(name);
+    $$(sel.genderInput)[gender].click();
+    $(sel.age).setValue(age);
+
+}
+
+function inputValuesAndClick (name, gender, age, storyType) {
+    
+    $(sel.name).setValue(name);
+    $$(sel.genderInput)[gender].click();
+    $(sel.age).setValue(age);
+    $(sel.story).click();
+    $$(sel.typeOfStory)[storyType].click();
+    $(sel.createBtn).click();
+}
+
+
+module.exports = {field, gender, story, userInput, inputValues4, inputValues3, inputValuesAndClick}
