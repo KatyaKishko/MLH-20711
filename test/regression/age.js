@@ -41,7 +41,7 @@ describe('Age', function () {
 
         it('TC-5.5 Input number 1', function () {
 
-            $(sel.age).setValue(val.twelveSymbol);
+            $(sel.age).setValue(val.number1);
             const alert = $(sel.errorMsg).isDisplayed();
             expect(alert).toEqual(false);
         });
