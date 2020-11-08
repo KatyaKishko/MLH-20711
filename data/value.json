@@ -1,0 +1,17 @@
+{
+  "number1": "1",
+  "number2": "2",
+  "number3": "3",
+  "numberZero": "007",
+  "numberArb": "k@",
+  "twelveSymbol": "999999999999",
+  "fractionalNumber": "6.8",
+  "negativeNumber": "-1",
+  "maxNumber": "1000000000000",
+  "spezsymbolPlus": "+",
+  "spezCharMinus": "-",
+  "spezChar$": "$",
+  "spezCharDat": ".",
+  "upperLetters": "E",
+  "lowerLetters": "e"
+}
