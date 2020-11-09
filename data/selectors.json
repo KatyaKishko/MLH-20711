@@ -21,5 +21,8 @@
   "spiner": ".ant-input-number-input-wrap",
   "spinerUp": ".ant-input-number-handler-up",
   "spinerDown": ".ant-input-number-handler-down",
-  "storyMoral":".card-text"
+  "storyMoral":".card-text",
+  "titleOfComedy": "h4",
+  "bodyOfComedy": "p.card-text",
+  "avatarImg": "img.error__pic"
 }
