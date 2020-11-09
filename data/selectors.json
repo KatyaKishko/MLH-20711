@@ -14,5 +14,6 @@
   "dragAndDropField": ".ant-upload",
   "createBtn": ".ant-btn",
   "tryAgain": ".btn-primary",
-  "errorMsg": ".ant-form-item-explain"
+  "errorMsg": ".ant-form-item-explain",
+  "errorImagePopUp":"$$('.ant-message-error')"
 }

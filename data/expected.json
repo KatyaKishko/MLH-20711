@@ -23,6 +23,8 @@
   "createBtnText": "Create!",
   "errorMessage": "70 symbols max",
   "errorMsgDefault": "Required",
+  "errorFormat": "You can only upload JPG/PNG file!",
+  "errorSize": "Image must be smaller than 4MB!",
   "nameInput1": "fgggggggggggggggggggggggggggggffffffffffffffffffffffffffffffffffffdfsd",
   "nameInput2": "a",
   "nameInput3": "fgggggggggggggggggggggggggggggffffffffffffffffffffffffffffffffffffdfsda",
