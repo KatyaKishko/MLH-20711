@@ -13,7 +13,7 @@ describe('Age', function () {
         });
 
         it('TC-5.2 Age', function () {
-            browser.pause(1000);
+
             const label = $$(sel.label)[2].isDisplayed();
             expect(label).toEqual(true);
         });
@@ -50,7 +50,7 @@ describe('Age', function () {
 
             $(sel.age).doubleClick();
             browser.keys('\u007F');
-            browser.pause(2000)
+
             $(sel.age).setValue(val.fractionalNumber);
             const alert = $(sel.errorMsg).isDisplayed();
             expect(alert).toEqual(true);
@@ -110,7 +110,7 @@ describe('Age', function () {
             $(sel.spinerDown).click();
 
             $(sel.spinerDown).click();
-            browser.pause(1000);
+
             const input = $(sel.age).getValue();
             expect(input).toEqual(val.negativeNumber);
         });
@@ -198,7 +198,7 @@ describe('Age', function () {
             $(sel.age).doubleClick();
             browser.keys('\u007F');
             const input = $(sel.age).setValue(val.numberZero);
-            browser.pause(2000);
+
             const alert = $(sel.errorMsg).getText();
             expect(alert).toEqual(exp.errorMsg);
         });
@@ -209,18 +209,18 @@ describe('Age', function () {
             const input = $(sel.age).setValue(val.number1);
             $(sel.age).doubleClick();
             browser.keys('\u007F');
-            browser.pause(2000);
+
             const alert = $(sel.errorMsg).getText();
             expect(alert).toEqual(exp.errorMsgDefault);
 
         });
 
         it('TC-5.24', function () {
-            browser.pause(2000);
+
             $(sel.age).doubleClick();
             browser.keys('\uE003');
             const input = $(sel.age).setValue(val.numberArb);
-            browser.pause(2000);
+
             const alert = $(sel.errorMsg).getText();
             expect(alert).toEqual(exp.errorMsg);
         });
