@@ -1,4 +1,5 @@
 {
+  "title": "MLH trial",
   "labelHeader": "My Little Hero",
   "labelSubheader": "Let's create your own HERO! It's super easy with our application!",
   "labelName": "1. What is your Hero's name?",
@@ -22,9 +23,11 @@
   "comedy": "Comedy",
   "createBtnText": "Create!",
   "errorMessage": "70 symbols max",
-  "errorMsgDefault": "Required",
   "errorFormat": "You can only upload JPG/PNG file!",
   "errorSize": "Image must be smaller than 4MB!",
+  "errorMsg": "looks like unreal age",
+  "errorMsgDefault": "Required",
+  "invalidInput": "o",
   "nameInput1": "fgggggggggggggggggggggggggggggffffffffffffffffffffffffffffffffffffdfsd",
   "nameInput2": "a",
   "nameInput3": "fgggggggggggggggggggggggggggggffffffffffffffffffffffffffffffffffffdfsda",
@@ -33,5 +36,6 @@
   "nameInput6": "h",
   "nameInput7": "6",
   "nameInput8": "$",
-  "nameInput9": "привет"
+  "nameInput9": "привет",
+  "storyMoral":"Moral: When you quarrel amongst yourselves, someone else gains from it."
 }
