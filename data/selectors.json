@@ -14,5 +14,10 @@
   "dragAndDropField": ".ant-upload",
   "createBtn": ".ant-btn",
   "tryAgain": ".btn-primary",
-  "errorMsg": ".ant-form-item-explain"
+  "errorMsg": ".ant-form-item-explain",
+
+  "titleOfComedy": "h4",
+  "bodyOfComedy": "p.card-text",
+  "avatarImg": "img.error__pic"
+
 }

@@ -1,3 +1,5 @@
+
+
 {
   "labelHeader": "My Little Hero",
   "labelSubheader": "Let's create your own HERO! It's super easy with our application!",
@@ -31,5 +33,7 @@
   "nameInput6": "h",
   "nameInput7": "6",
   "nameInput8": "$",
-  "nameInput9": "привет"
+  "nameInput9": "привет",
+
+  "comedyTemplate": "Two Cats And A   After a feast, two cats see a piece of cake and start fighting for it.  , who is   old, sees this as an opportunity for gain and offers to help them. Our hero divides the cake into two parts but shakes   head saying they are unequal.   takes a bite of one piece and then the other, but still finds them unequal.   continues doing so until there is no more cake left. leaving the poor little cats disappointed. Moral: When you quarrel amongst yourselves, someone else gains from it."
 }
