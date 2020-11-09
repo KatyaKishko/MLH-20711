@@ -1,39 +1,33 @@
-const sel = require ('../../data/selectors.json')
-const exp = require ('../../data/expected.json')
-const data = require ('../../data/testData.json')
+const sel = require ('../../data/selectors.json');
+const exp = require ('../../data/expected.json');
+const data = require ('../../data/testData.json');
 const {inputValues4AndClick, number2word, pOfComedy, gender, story, field} = require("../../data/helpers");
 
-
-
 describe('MLH-504 Inputs are present in the story', function (){
-
-    it('TC-9.1 Name is present in the title', function (){
+    before(() => {
         browser.url('');
         inputValues4AndClick(data.name, data.gender.he, data.age, data.storyType);
+    });
+
+    it('TC-9.1 Name is present in the title', function (){
         const title = $(sel.titleOfComedy);
         expect(title).toHaveTextContaining(data.name);
     });
 
    it('TC-9.2 Name is present in the body', function (){
-        browser.url('');
-        inputValues4AndClick(data.name, data.gender.he, data.age, data.storyType);
         const body = $$(sel.bodyOfComedy)[pOfComedy.body];
         expect(body).toHaveTextContaining(data.name);
-    });
+   });
 
-    it('TC-9.3 Gender He is present in the story', function (){
-        browser.url('');
-        inputValues4AndClick(data.name, data.gender.he, data.age, data.storyType);
+   it('TC-9.3 Gender He is present in the story', function (){
         const body = $$(sel.bodyOfComedy)[pOfComedy.body];
         expect(body).toHaveTextContaining('He');
-    });
+   });
 
-    it('TC-9.4 Gender He turns His', function (){
-        browser.url('');
-        inputValues4AndClick(data.name, data.gender.he, data.age, data.storyType);
+   it('TC-9.4 Gender He turns His', function (){
         const body = $$(sel.bodyOfComedy)[pOfComedy.body];
         expect(body).toHaveTextContaining('his');
-    });
+   });
 
     it('TC-9.5 Gender She is present in the story', function (){
         browser.url('');
