@@ -21,7 +21,7 @@ exports.config = {
     ],
     // Patterns to exclude.
     exclude: [
-
+        // 'path/to/excluded/files'
     ],
     //
     // ============
@@ -128,7 +128,8 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec','dot',['allure', {outputDir: 'allure-results'}]],
+    reporters: ['dot','spec','allure'],
+    reporterOptions: { allure: { outputDir: 'allure-results' } },
 
 
     
@@ -137,6 +138,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
+        compilers: ['js:@babel/register'],
         timeout: 60000
     },
     //
