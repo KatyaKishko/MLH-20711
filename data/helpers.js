@@ -35,12 +35,26 @@ const userInput = {
 }
 
 function inputValues4 (name, gender, age, storyType) {
-
     $(sel.name).setValue(name);
     $$(sel.genderInput)[gender].click();
     $(sel.age).setValue(age);
     $(sel.story).click();
     $$(sel.typeOfStory)[storyType].click();
+}
+
+function inputValues3 (name, gender, age) {
+    $(sel.name).setValue(name);
+    $$(sel.genderInput)[gender].click();
+    $(sel.age).setValue(age);
+}
+
+function inputValuesAndClick (name, gender, age, storyType) {
+    $(sel.name).setValue(name);
+    $$(sel.genderInput)[gender].click();
+    $(sel.age).setValue(age);
+    $(sel.story).click();
+    $$(sel.typeOfStory)[storyType].click();
+    $(sel.createBtn).click();
 }
 
 function inputValues4AndClick (name, gender, age, storyType){
@@ -63,7 +77,6 @@ function number2word(age){
     if (age < 1000000) return number2word(~~(age/1000)) + " thousand" + (age%1000 !== 0? " " + number2word(age%1000): "");
     if (age < 1000000000) return number2word(~~(age/1000000)) + " million" + (age%1000000 !== 0? " " + number2word(age%1000000): "");
     return number2word(~~(age/1000000000)) + " billion" + (age%1000000000 !== 0? " " + number2word(age%1000000000): "");
-
 }
 
 const pOfComedy = {
@@ -71,4 +84,4 @@ const pOfComedy = {
     moral: 1
 }
 
-module.exports = {field, gender, story, userInput, inputValues4, inputValues4AndClick, number2word, pOfComedy}
+module.exports = {field, gender, story, userInput, inputValues4, inputValues3, inputValuesAndClick, inputValues4AndClick, number2word, pOfComedy}

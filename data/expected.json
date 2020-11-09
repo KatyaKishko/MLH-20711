@@ -1,6 +1,5 @@
-
-
 {
+  "title": "MLH trial",
   "labelHeader": "My Little Hero",
   "labelSubheader": "Let's create your own HERO! It's super easy with our application!",
   "labelName": "1. What is your Hero's name?",
@@ -24,7 +23,11 @@
   "comedy": "Comedy",
   "createBtnText": "Create!",
   "errorMessage": "70 symbols max",
+  "errorFormat": "You can only upload JPG/PNG file!",
+  "errorSize": "Image must be smaller than 4MB!",
+  "errorMsg": "looks like unreal age",
   "errorMsgDefault": "Required",
+  "invalidInput": "o",
   "nameInput1": "fgggggggggggggggggggggggggggggffffffffffffffffffffffffffffffffffffdfsd",
   "nameInput2": "a",
   "nameInput3": "fgggggggggggggggggggggggggggggffffffffffffffffffffffffffffffffffffdfsda",
@@ -34,6 +37,6 @@
   "nameInput7": "6",
   "nameInput8": "$",
   "nameInput9": "привет",
-
+  "storyMoral":"Moral: When you quarrel amongst yourselves, someone else gains from it.",
   "comedyTemplate": "Two Cats And A   After a feast, two cats see a piece of cake and start fighting for it.  , who is   old, sees this as an opportunity for gain and offers to help them. Our hero divides the cake into two parts but shakes   head saying they are unequal.   takes a bite of one piece and then the other, but still finds them unequal.   continues doing so until there is no more cake left. leaving the poor little cats disappointed. Moral: When you quarrel amongst yourselves, someone else gains from it."
 }

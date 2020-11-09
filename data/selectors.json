@@ -1,4 +1,5 @@
 {
+  "title": "MLH trial",
   "header": "h3",
   "subHeader": "p",
   "label": ".ant-form-item-label",
@@ -15,9 +16,13 @@
   "createBtn": ".ant-btn",
   "tryAgain": ".btn-primary",
   "errorMsg": ".ant-form-item-explain",
-
+  "errorImagePopUp":"$$('.ant-message-error')",
+  "placeHolderAge": ".ant-input-number-input",
+  "spiner": ".ant-input-number-input-wrap",
+  "spinerUp": ".ant-input-number-handler-up",
+  "spinerDown": ".ant-input-number-handler-down",
+  "storyMoral":".card-text",
   "titleOfComedy": "h4",
   "bodyOfComedy": "p.card-text",
   "avatarImg": "img.error__pic"
-
 }
