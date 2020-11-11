@@ -54,5 +54,4 @@ describe('Label 2: Gender', function () {
         $$(sel.radioBtn)[gender.IT].click();
         expect($$(sel.radioBtn)[gender.IT].getText()).toEqual(exp.IT);
     });
-
 });
