@@ -58,5 +58,3 @@ describe('Label 4: Story', function () {
         expect($$(sel.typeOfStory)[story.tragedy].getText()).toEqual(exp.tragedy);
     });
 });
-
-
