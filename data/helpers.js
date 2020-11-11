@@ -33,7 +33,6 @@ const userInput = {
     name9: 'привет',
     randomInput: 'k'
 }
-
 function inputValues4 (name, gender, age, storyType) {
     $(sel.name).setValue(name);
     $$(sel.genderInput)[gender].click();
@@ -41,13 +40,11 @@ function inputValues4 (name, gender, age, storyType) {
     $(sel.story).click();
     $$(sel.typeOfStory)[storyType].click();
 }
-
 function inputValues3 (name, gender, age) {
     $(sel.name).setValue(name);
     $$(sel.genderInput)[gender].click();
     $(sel.age).setValue(age);
 }
-
 function inputValuesAndClick (name, gender, age, storyType) {
     $(sel.name).setValue(name);
     $$(sel.genderInput)[gender].click();
@@ -56,7 +53,6 @@ function inputValuesAndClick (name, gender, age, storyType) {
     $$(sel.typeOfStory)[storyType].click();
     $(sel.createBtn).click();
 }
-
 function inputValues4AndClick (name, gender, age, storyType){
     $(sel.name).setValue(name);
     $$(sel.genderInput)[gender].click();
@@ -65,7 +61,6 @@ function inputValues4AndClick (name, gender, age, storyType){
     $$(sel.typeOfStory)[storyType].click();
     $(sel.createBtn).click();
 }
-
 let num = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split(" ");
 let tens = "twenty thirty forty fifty sixty seventy eighty ninety".split(" ");
 
@@ -78,10 +73,8 @@ function number2word(age){
     if (age < 1000000000) return number2word(~~(age/1000000)) + " million" + (age%1000000 !== 0? " " + number2word(age%1000000): "");
     return number2word(~~(age/1000000000)) + " billion" + (age%1000000000 !== 0? " " + number2word(age%1000000000): "");
 }
-
 const pOfComedy = {
     body: 0,
     moral: 1
 }
-
 module.exports = {field, gender, story, userInput, inputValues4, inputValues3, inputValuesAndClick, inputValues4AndClick, number2word, pOfComedy}
