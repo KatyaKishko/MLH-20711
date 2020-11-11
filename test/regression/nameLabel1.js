@@ -82,5 +82,4 @@ describe('Label 1: Name', function () {
         browser.pause(2000)
         expect($(sel.errorMsg).getText()).toEqual(exp.errorMsgDefault);
     });
-
 });
