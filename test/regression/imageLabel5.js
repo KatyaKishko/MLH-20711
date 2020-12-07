@@ -4,7 +4,6 @@ const data = require ('../../data/testData.json');
 const path = require('path');
 import {field, userInput, inputValues4} from "../../data/helpers"
 
-
 describe('Label 5: Image', function () {
     before(() => {
         browser.url('https://qa-apps.netlify.app/app_my_hero');
@@ -71,4 +70,3 @@ describe('Label 5: Image', function () {
     });
 
 });
-
