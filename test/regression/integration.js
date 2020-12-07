@@ -27,7 +27,5 @@ describe('Story', function () {
             const text = $$(sel.storyMoral)[1].getText()
             expect(text).toEqual(exp.storyMoral);
         });
-
     });
-
 });
