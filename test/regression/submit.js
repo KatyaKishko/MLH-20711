@@ -38,6 +38,4 @@ describe('Submit Button', function () {
       const tryAgain = $(sel.tryAgain).isDisplayed();
       expect(tryAgain).toEqual(true);
     });
-
-  
-})
+});
