@@ -31,13 +31,14 @@ describe('Age', function () {
         it('TC-5.3.1 Placeholder age text' , function () {
             const plhold = $(sel.placeHolderAge).getAttribute('placeholder');
             expect(plhold).toEqual(exp.placeholderAge);
-        })
+        });
+        
         it('TC-5.4 Spiner ' , function () {
 
             $(sel.age).click();
             const spiner = $(sel.spiner).isDisplayed();
             expect(spiner).toEqual(true);
-        })
+        });
 
         it('TC-5.5 Input number 1', function () {
 
